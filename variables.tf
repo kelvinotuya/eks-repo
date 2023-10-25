@@ -36,19 +36,19 @@ variable "cluster_asg_desired_capacity" {
 }
 
 variable "cluster_asg_max_size" {
-  type        = number
-  description = "The maximum number of EC2 instances our EKS cluster will have."
-  default     = 5
+type = number
+description = "The maximum number of EC2 instances our EKS cluster will have."
+default = 5
 }
 
 variable "cluster_enabled_log_types" {
-  type        = list(string)
-  description = "The Kubernetes log types that will be enabled for the EKS cluster."
-  default     = ["api", "audit", "authenticator", "controllerManager", "scheduler"]
+type = list(string)
+description = "The Kubernetes log types that will be enabled for the EKS cluster."
+default = ["api", "audit", "authenticator", "controllerManager", "scheduler"]
 }
 
 variable "cluster_write_kubeconfig" {
-  type        = bool
-  description = "Specify if Terraform should output the Kubernetes configuration file. "
-  default     = false
+type = bool
+description = "Specify if Terraform should output the Kubernetes configuration file. "
+default = false
 }
